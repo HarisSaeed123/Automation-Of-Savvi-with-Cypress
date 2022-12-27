@@ -1,0 +1,78 @@
+{
+    "Signup": {
+        "firstName": "//input[@id='firstName']",
+        "lastName": "//input[@id='lastName']",
+        "emailAddress": "//input[@id='emailAddress']",
+        "signupBtn": "form fieldset:nth-child(2)",
+        "emailField": "//input[@id = 'identifierId']"
+    },
+    "otp": "//input[@name='codeInput-0']",
+    "Signin": {
+        "email": "//input[@id = 'text-field-identifier']",
+        "signInBtn": "//a[@href='https://app.savvi.co/sign-in#/?redirect_url=https%3A%2F%2Fapp.savvi.co%2F']"
+    },
+    "savviBranding" :{
+        "setting": "//div[@class='group-tooltip relative']/a[@href='/settings']",
+        "savviBrand": "//input[@type='text']",
+        "savviDashboard": "//img[@alt='Fearlesslabs']"
+    },
+    "customer": {
+        "boardsList": "//div[@class='group-tooltip relative']/a[@aria-label = 'List transaction boards']",
+        "collaborators": "//div[@class='group-tooltip relative']/a[@aria-label = 'Add collaborators to the customer']",
+        "customerSetting": "//div[@class='group-tooltip relative']/a[@aria-label = 'Settings']",
+        "customerBtn": "//a[@href='/workspaces']",
+        "avatar" : "//main/div/div/div/div/div/div",
+        "myColleague" : "//main/div/div/div/div[2]/div/div/div/img",
+        "addCustomer": "//button[@aria-label='Create new customer']",
+        "editCustomerName": "//span[@aria-label='Edit customer name']",
+        "sidebarButton": "//div[@class='flex items-center space-x-2']/button",
+        "sidebarCrossBtn": "//button[@tabindex='0']",
+        "boardIcon": "div[class='flex justify-around divide-x-2'] div:nth-child(1)",
+        "usersIcon": "div[class='flex justify-around divide-x-2'] div:nth-child(2)",
+        "activityIcon": "div[class='flex justify-around divide-x-2'] div:nth-child(3)",
+        "teamMemberIcon": "//img[@src='https://www.gravatar.com/avatar?d=mp']",
+        "setCustomerName": "//section/div[1]/div[1]/input[1]",
+        "setCustomerBranding": "//input[@placeholder='website address']",
+        "deleteCustomer" : "//input[@id='delete-field']",
+        "deleteButton" : "//button[@id='delete-button']",
+        "shareworkspace" : "//main/div[2]/div/div/div/div/div/a[3]",
+        "worskpaceShareEmail" : "//input[@placeholder='Email addresses']",
+        "shareMsg": "//textarea[@placeholder='Add a message...']"
+    },
+    "transactionBoard": {
+        "addBoard": "//button[@aria-label='Create new board']",
+        "boardTitle": "//input[@id='boardName']",
+        "boardButton": "//div[@class='flex relative justify-end']",
+        "cancelBoardButton" : "//main/div/section[2]/div/div[5]/button[1]",
+        "boardDescription": "//textarea[@id='boardDescription']",
+        "link": "//main/div/div/section[3]/div[2]/div[2]/div/label/div/input",
+        "youTubeLink" : "//input[@type='text']",
+        "videoCancelBtn": "//div[@aria-modal='true']/div[2]/div/button[2]",
+        "startRecordingBtn": "//div[@aria-modal='true']/div[2]/div/button[1]",
+        "videoTitle": "//input[@maxlength='200']",
+        "videoDescription": "//textarea[@rows='4']",
+        "previewBtn": "//a[@aria-label='Preview']",
+        "editBoardBtn": "//div/div[@class='group-tooltip relative'][2]/a",
+        "editBoardPageBtns" : "[class='group-tooltip relative']",
+        "boardViewBtn": "//div/div[@class='group-tooltip relative'][1]/a",
+        "boardAnalyticsBtn": "//div/div[@class='group-tooltip relative'][3]/a",
+        "deleteBtn": "//div[@class='flex justify-end mb-4']//button",  
+        "articleLink" : "//input[@type='text']",
+        "shareButton" : "div[class='group-tooltip relative']",
+        "shareBoardEmailAddress": "//input[@placeholder='Email addresses']",
+        "shareMsg": "//textarea[@placeholder='Add a message...']",
+        "deleteBoardCancelBtn" : "//button[@tabindex='0']",
+        "sharedWithMeBtn" : "//a[@href='/boards']"
+    },
+    "editTransactionBoard" : {
+        "editDescription": "//textarea[@placeholder='Enter transaction board description']",
+        "editBoardTitle" : "//span[@contenteditable='true']",
+        "editDocumentTitle":"//input[@maxlength='200']",
+        "editDocDescription": "//div/label/following-sibling::textarea",
+        "deleteContentBtn" : "//aside/nav/button[4]/span",
+        "DeleteButton" : "//div[@class='flex justify-end']/button",
+        "cancelDeleteBtn" : "//button[@tabindex='0']",
+        "discussion" : "//aside/nav/button[3]",
+        "addComments" : "//div[@id='edit-board-threads']/div[1]/article/div/div/div/div[@class='DraftEditor-root']/div[@class='DraftEditor-editorContainer']/div[@contenteditable='true']"
+    }
+}

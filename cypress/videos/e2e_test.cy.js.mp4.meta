@@ -1,0 +1,51 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=-3042
+END=7644
+title=End To End Testing Verify that the user can be logged in with valid credentals
+[CHAPTER]
+TIMEBASE=1/1000
+START=6231
+END=18347
+title=End To End Testing A logged in user can add the savvi brand
+[CHAPTER]
+TIMEBASE=1/1000
+START=17512
+END=30491
+title=End To End Testing A logged in user can create a workspace
+[CHAPTER]
+TIMEBASE=1/1000
+START=39171
+END=43560
+title=End To End Testing A logged in user can update the workspace
+[CHAPTER]
+TIMEBASE=1/1000
+START=43571
+END=47957
+title=End To End Testing A logged in user can update the customer name in the settings
+[CHAPTER]
+TIMEBASE=1/1000
+START=48056
+END=52353
+title=End To End Testing A logged in user can add the branding in the setings
+[CHAPTER]
+TIMEBASE=1/1000
+START=52236
+END=56656
+title=End To End Testing A logged in user can create the transaction board
+[CHAPTER]
+TIMEBASE=1/1000
+START=56718
+END=61084
+title=End To End Testing A logged in user can add the content, youtube videos and articles in the transaction board
+[CHAPTER]
+TIMEBASE=1/1000
+START=61091
+END=65457
+title=End To End Testing A logged in user can view the created transaction board
+[CHAPTER]
+TIMEBASE=1/1000
+START=69734
+END=69831
+title=End To End Testing A logged in user can edit the transaction board

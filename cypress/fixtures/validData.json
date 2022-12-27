@@ -1,0 +1,26 @@
+{
+    "FirstName": "Taimur",
+    "LastName": "test",
+    "Email": "taimur.aamer@frrzzj35.mailosaur.net",
+    "signIn": {
+        "emailId": "taimur.aamer710@frrzzj35.mailosaur.net"
+    },
+    "customerData": {
+        "customerName": "Careem Service",
+        "brandDomain": "https://www.ox.ac.uk",
+        "workspaceMessage": "Join the workspace"
+    },
+    "transactionBoardData": {
+        "boardName": "Careem Rider",
+        "youTubeVideo": "https://www.youtube.com/watch?v=T3q6QcCQZQg",
+        "article": "https://edition.cnn.com/2022/07/16/us/hardin-montana-dust-storm-crash/index.html",
+        "title": "Software Testing",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "description1": "Careem is a Dubai-based super app with operations in over 100 cities, covering 12 countries across the Middle East, Africa, and South Asia regions. The company, which was valued at over US$2 billion in 2018, became a wholly-owned subsidiary of Uber after being acquired for $3.1 billion in January 2020.",
+        "youTubeVideo1": "https://www.youtube.com/watch?v=pcTS5I5kpEs",
+        "article1": "https://edition.cnn.com/2022/07/17/us/indiana-greenwood-park-mall-shooting/index.html",
+        "invitedEmail": "taimur.aamer587@frrzzj35.mailosaur.net",
+        "message": "Join the transaction board",
+        "documentDescription": "This document is related to the sofware quality assurance."
+    }
+}

@@ -1,0 +1,95 @@
+///<reference types="cypress"/>
+import selector from "../fixtures/locators.json";
+import { user } from "../src/registration";
+import { workspace } from "../src/workspace";
+import { board } from "../src/transactionBoard";
+import { edit } from "../src/edit_transaction_board";
+import data from "../fixtures/validData.json";
+const { email, signInBtn } = selector.Signin;
+const { emailId } = data.signIn;
+const { otp } = selector;
+const {
+    editCustomerName,
+} = selector.customer;
+const { boardTitle, boardViewBtn, editBoardBtn, boardAnalyticsBtn, shareButton } = selector.transactionBoard
+const { deleteContentBtn, DeleteButton, cancelDeleteBtn } = selector.editTransactionBoard
+const { customerName, } = data.customerData;
+const customer = `${customerName}${Math.ceil(Math.random() * 3000)}`;
+const { boardName } = data.transactionBoardData;
+const transactionBoardName = `${boardName}${Math.ceil(Math.random() * 3000)}`;
+const serverId = "frrzzj35";
+const attachment = "IT.docx"
+const attachment1 = "softwaretesting.docx"
+describe('Transaction Board E2E Testing', () => {
+    it("Verify that the user can be logged in with valid credentals", () => {
+        cy.visit("/");
+        cy.xpath(signInBtn).click();
+        user.userInfo(email, emailId);
+        cy.contains(/continue/i).click();
+        cy.mailosaurGetMessage(serverId, {
+            sentTo: emailId,
+        }).then((userId) => {
+            cy.xpath(otp).type(userId.html.codes[0].value)
+        });
+    });
+    it("A logged in user can create a workspace", () => {
+        workspace.createWorkSpace(editCustomerName, customer)
+    });
+    it('A logged in user can create the transaction board', () => {
+        //Verified the customer name on the /create-board page
+        cy.contains(customer).should('be.visible')
+        board.createBoard(boardTitle, transactionBoardName)
+    })
+    it('A logged in user can view the created transaction board', () => {
+        //Verified the text "Board successfully created"
+        cy.contains('h6', 'Board successfully created').should('be.visible')
+        //Verified the text 'Continue to view your board' 
+        cy.contains('span', 'Continue to view your board').should('be.visible')
+        cy.contains('button', 'Continue').should('be.visible').click()
+        //Verified the board View button
+        cy.xpath(boardViewBtn).should('be.visible')
+        //Verified the board Edit button 
+        cy.xpath(editBoardBtn).should('be.visible')
+        //Verified the Analytics button
+        cy.xpath(boardAnalyticsBtn).should('be.visible')
+        //Verifed the name of the the transaction board on the board view page
+        cy.contains(transactionBoardName).should('be.visible')
+        //Verified the attachments on the board view page
+        cy.contains('h2', attachment).should('be.visible')
+        cy.contains('h2', attachment1).should('be.visible')
+        //Verified the "Share" button on the board view page
+        cy.contains(shareButton, 'Share').should('be.visible')
+    })
+    it('A logged in user can delete the uploaded content', () => {
+        cy.xpath(editBoardBtn).should('be.visible').click()
+        cy.contains('span', attachment1).click()
+        //Verified the delete button
+        cy.xpath(deleteContentBtn).should('be.visible').click()
+        //Verified the "Delete" text
+        cy.contains('h4', 'Delete').should('be.visible')
+        //Verified the text "Are you sure you would like to delete this asset? This action cannot be reversed."
+        cy.contains('p', 'Are you sure you would like to delete this asset? This action cannot be reversed.').should('be.visible')
+        //Deleting the content
+        cy.xpath(DeleteButton).should('be.visible').click()
+        //Verified the "Pop up" delete message
+        cy.contains('h2', `Delete ${attachment1}`)
+        cy.contains('p', `Are you sure you would like to delete ${attachment1}?`)
+        //Verified the "Cancel" button on  the pop up window
+        cy.xpath(cancelDeleteBtn).should('be.visible').click()
+        cy.xpath(DeleteButton).should('be.visible').click()
+        //Verified the "Delete section" button
+        cy.contains('button', 'Delete section').should('be.visible').click()
+        //Verified the confirm delete message
+        cy.contains('span', `${attachment1} deleted`).should('be.visible')
+    })
+})
+
+
+
+
+
+
+
+
+
+
